@@ -8,14 +8,15 @@ jobs:
     steps:
       - checkout
       - run:
-        name: install dependencies
-        command: |
-          python -m venv .venv
-          source .venv/bin/activate
-          pip install -r requirements.txt
+          name: install dependencies
+          command: |
+            python -m venv .venv
+            source .venv/bin/activate
+            pip install -r requirements.txt
       
       - run:
-        name: run tests
-        command: |
-          source .venv/bin/activate
-          pytest -v --cov=Heap
+          name: run tests
+          command: |
+            source .venv/bin/activate
+            pytest -v --cov=Heap
+
